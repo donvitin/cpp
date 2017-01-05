@@ -6,7 +6,7 @@ using namespace std;
 
 int  main(){
     char gameSelect;
-    cout << "\n(M)ega or (P)owerBall, (C)ash4Life, or (Q)uit: ";
+    cout << "\n(M)ega or (P)owerBall, (C)ash4Life, or (Q)uit: " ;
     cin >> gameSelect;
     
     int plays;
@@ -30,7 +30,7 @@ int  main(){
             
             break;
         case 'Q':
-            cout << "Thanks for playing, Bye..." << endl << endl ;
+            cout << "Thanks for playing, Bye..." << endl  ;
             return 0;
         default: 
              cout << "Must select 'M' or 'P', Bye!\n";
