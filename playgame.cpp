@@ -18,11 +18,25 @@
         for(int i=0; i<numOfPlays;i++){
             for (int i=1; i<=5; ++i) {
                 do {
-                    if(game == Game::MegaMillions){
-                        guess = rand() % 75 + 1;
-                    }else {
-                         guess = rand() % 69 + 1;
+                    // if(game == Game::MegaMillions){
+                    //     guess = rand() % 75 + 1;
+                    // }else{
+                    //      guess = rand() % 69 + 1;
                         
+                    // }
+                    switch (game){
+                        case Game::PowerBall : 
+                            guess = rand() % 69 + 1;
+                            break;
+                        case Game::MegaMillions :
+                            guess = rand() % 75 + 1;
+                            break;
+                        case Game::Cash4Life : 
+                            guess = rand() % 60 + 1;
+                            break;
+                        default:
+                            cout << "Enter Capital letter P, M, C or Q" << endl;
+                            break;
                     }
                         
                     ret = pick.insert(guess);
@@ -46,11 +60,24 @@
             for (std::set<int>::iterator it=picks.begin(); it!=picks.end(); ++it){
                 std::cout << ' ' << *it ;
             }
-            if(game==Game::MegaMillions){
-                power_ball = rand() % 15 + 1; 
-            }else {
-                power_ball = rand() % 26 + 1;    
+            // if(game==Game::MegaMillions){
+            //     power_ball = rand() % 15 + 1; 
+            // }else {
+            //     power_ball = rand() % 26 + 1;    
+            // }
+            switch (game){
+                case Game::PowerBall : 
+                    power_ball = rand() % 26 + 1;
+                    break;
+                case Game::MegaMillions :
+                    power_ball = rand() % 15 + 1;
+                    break;
+                case Game::Cash4Life : 
+                    power_ball = rand() % 4 + 1;
+                    break;
+                
             }
+            
             std::cout << "\t Power Ball: " << power_ball << '\n';    
         }
     }

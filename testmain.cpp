@@ -6,7 +6,7 @@ using namespace std;
 
 int  main(){
     char gameSelect;
-    cout << "\n(M)ega or (P)owerBall, or (Q)uit: ";
+    cout << "\n(M)ega or (P)owerBall, (C)ash4Life, or (Q)uit: ";
     cin >> gameSelect;
     
     int plays;
@@ -24,8 +24,13 @@ int  main(){
             game = new PlayGame(Game::MegaMillions,plays);
             
             break;
+        case 'C':
+            plays = PlayGame::setNumberOfPlays();
+            game = new PlayGame(Game::Cash4Life,plays);
+            
+            break;
         case 'Q':
-            cout << "Thanks for playing, Bye...";
+            cout << "Thanks for playing, Bye..." << endl << endl ;
             return 0;
         default: 
              cout << "Must select 'M' or 'P', Bye!\n";
@@ -37,5 +42,6 @@ int  main(){
     game->printGames();
       
     std::cout <<  std::endl;
+    return 0;
 } //end
         

@@ -8,7 +8,9 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
-enum class Game {PowerBall, MegaMillions, NoGame};
+enum class Game {PowerBall, MegaMillions, Cash4Life, NoGame};
+
+using namespace std;
 
 
 class PlayGame {
